@@ -1,7 +1,7 @@
-import React from "react";
+import { FC } from "react";
 //import "./button.css";
 
-interface ButtonProps {
+interface Props {
   primary?: boolean;
   icon?: HTMLElement;
   size?: "small" | "medium" | "large";
@@ -10,14 +10,14 @@ interface ButtonProps {
   onClick?: () => void;
 }
 
-export const Button = ({
+const Button: FC<Props> = ({
   primary = false,
   size = "medium",
   icon,
   label,
   disabled,
   ...props
-}: ButtonProps) => {
+}) => {
   const mode = primary ? "btn--primary" : "btn--secondary";
   return (
     <button
@@ -33,3 +33,5 @@ export const Button = ({
     </button>
   );
 };
+
+export default Button;

@@ -1,11 +1,12 @@
 import React from "react";
-import "./button.css";
+//import "./button.css";
 
 interface ButtonProps {
   primary?: boolean;
   icon?: HTMLElement;
   size?: "small" | "medium" | "large";
   label: string;
+  disabled?: boolean;
   onClick?: () => void;
 }
 
@@ -14,17 +15,15 @@ export const Button = ({
   size = "medium",
   icon,
   label,
+  disabled,
   ...props
 }: ButtonProps) => {
-  const mode = primary
-    ? "storybook-button--primary"
-    : "storybook-button--secondary";
+  const mode = primary ? "btn--primary" : "btn--secondary";
   return (
     <button
       type="button"
-      className={["storybook-button", `storybook-button--${size}`, mode].join(
-        " "
-      )}
+      className={["ui-button", `btn--${size}`, mode].join(" ")}
+      disabled={disabled}
       {...props}
     >
       <>

@@ -1,4 +1,9 @@
 .ui-icon {
+    &.default {
+        path {
+            fill: var(--color-primary);
+        }
+    }
 
     &.dark {
         path {

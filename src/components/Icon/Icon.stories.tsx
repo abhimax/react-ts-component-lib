@@ -21,3 +21,16 @@ export const starEmpty = Template.bind({});
 starEmpty.args = {
   name: "starEmpty",
 };
+
+export const Dark = Template.bind({});
+Dark.args = {
+  name: "starEmpty",
+  color: "dark",
+};
+
+export const size40 = Template.bind({});
+size40.args = {
+  name: "starEmpty",
+  color: "dark",
+  size: 40,
+};

@@ -6,7 +6,7 @@ interface IconProps {
   color?: string;
 }
 
-const Icon: React.FC<IconProps> = ({ name, size = 24, color = "dark" }) => {
+const Icon: React.FC<IconProps> = ({ name, size = 24, color = "default" }) => {
   return (
     <div className={`ui-icon ${name} ${color}`} style={{ width: size }}>
       {icons[name]}

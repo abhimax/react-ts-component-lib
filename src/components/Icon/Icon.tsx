@@ -3,11 +3,12 @@ import React from "react";
 interface IconProps {
   name: keyof typeof icons;
   size?: number;
+  color?: string;
 }
 
-const Icon: React.FC<IconProps> = ({ name, size = 24 }) => {
+const Icon: React.FC<IconProps> = ({ name, size = 24, color = "dark" }) => {
   return (
-    <div className={`ui-icon ${name}`} style={{ width: size }}>
+    <div className={`ui-icon ${name} ${color}`} style={{ width: size }}>
       {icons[name]}
     </div>
   );

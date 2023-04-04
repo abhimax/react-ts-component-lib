@@ -1,0 +1,14 @@
+.ui-icon {
+
+    &.dark {
+        path {
+            fill: var(--black);
+        }
+    }
+
+    &.light {
+        path {
+            fill: var(--white);
+        }
+    }
+}

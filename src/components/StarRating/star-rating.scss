@@ -1,0 +1,32 @@
+.star-ratings {
+  unicode-bidi: bidi-override;
+  color: var(--silver-medal);
+  font-size: 64px;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  width: fit-content;
+
+  .fill-ratings {
+    color: var(--color-warning);
+    padding: 0;
+    position: absolute;
+    z-index: 1;
+    display: block;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    font-size: 1rem;
+
+    span {
+      display: inline-block;
+    }
+  }
+
+  .empty-ratings {
+    padding: 0;
+    display: block;
+    z-index: 0;
+  }
+}

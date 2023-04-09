@@ -5,9 +5,10 @@ type InputProps = {
   label: string;
   size?: "small" | "medium" | "large";
   error?: string;
+  className?: string;
 } & Omit<
   React.InputHTMLAttributes<HTMLInputElement>,
-  "size" | "label" | "error"
+  "size" | "label" | "error" | "className"
 >;
 
 const Input: React.FC<InputProps> = ({
@@ -19,12 +20,8 @@ const Input: React.FC<InputProps> = ({
 }) => {
   const inputClassName = classNames(
     "input",
-    {
-      "input--small": size === "small",
-      "input--medium": size === "medium",
-      "input--large": size === "large",
-      "input--error": !!error,
-    },
+    size ? `input--${size}` : "",
+    error ? `input--${error}` : "",
     className
   );
 

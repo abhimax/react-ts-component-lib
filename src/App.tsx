@@ -10,7 +10,9 @@ function App() {
     <div className="App">
       <Button label="Test UI" />
       <Icon name="cross" size={24} />
+      <Input label="User Name" size="small" />
       <Input label="User Name" />
+      <Input label="User Name" size="large" />
     </div>
   );
 }

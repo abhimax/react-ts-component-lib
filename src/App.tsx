@@ -10,6 +10,7 @@ function App() {
       <Input label="User Name" size="small" />
       <Input label="User Name" />
       <Input label="User Name" size="large" />
+      <Input label="User Name" size="large" placeholder="Enter User Name" />
     </div>
   );
 }

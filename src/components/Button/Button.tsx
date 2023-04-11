@@ -1,16 +1,7 @@
 import { FC } from "react";
-//import "./button.css";
+import { IButtonProps } from "./Button.d";
 
-interface Props {
-  primary?: boolean;
-  icon?: HTMLElement;
-  size?: "small" | "medium" | "large";
-  label: string;
-  disabled?: boolean;
-  onClick?: () => void;
-}
-
-const Button: FC<Props> = ({
+const Button: FC<IButtonProps> = ({
   primary = false,
   size = "medium",
   icon,

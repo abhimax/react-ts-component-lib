@@ -1,8 +1,7 @@
 import { FC } from "react";
-interface Props {
-  rating: number;
-}
-const StarRating: FC<Props> = ({ rating }) => {
+import { IStarRatingProps } from "./StarRating.d";
+
+const StarRating: FC<IStarRatingProps> = ({ rating }) => {
   return (
     <div className="star-ratings">
       <div className="fill-ratings" style={{ width: `${rating * 10}%` }}>

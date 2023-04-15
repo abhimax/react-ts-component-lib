@@ -1,8 +1,8 @@
 interface IButtonProps {
   primary?: boolean;
-  icon?: HTMLElement;
+  icon?: React.ReactNode;
   size?: "small" | "medium" | "large";
-  label: string;
+  label?: string;
   disabled?: boolean;
   onClick?: () => void;
 }

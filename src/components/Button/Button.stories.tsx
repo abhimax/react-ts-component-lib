@@ -1,6 +1,7 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 import { Button } from "./index";
+import Icon from "../Icon/Icon";
 
 export default {
   title: "Components/Button",
@@ -33,6 +34,17 @@ export const Medium = Template.bind({});
 Medium.args = {
   size: "medium",
   label: "Button",
+};
+
+export const IconButton = Template.bind({});
+IconButton.args = {
+  icon: <Icon name="cross" />,
+};
+
+export const IconTextButton = Template.bind({});
+IconTextButton.args = {
+  icon: <Icon name="cross" size={12} color="light" />,
+  label: "Close",
 };
 
 export const Small = Template.bind({});

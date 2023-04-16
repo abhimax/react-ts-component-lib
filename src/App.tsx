@@ -1,7 +1,7 @@
 import Button from "./components/Button/Button";
 import Icon from "./components/Icon/Icon";
 import Input from "./components/Input/Input";
-import Loader from "./components/Loader/Loader";
+import { Loader } from "./components/Loader/";
 
 function App() {
   return (

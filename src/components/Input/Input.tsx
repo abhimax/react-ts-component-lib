@@ -29,9 +29,14 @@ const Input: React.FC<InputProps> = ({
   );
 
   return (
-    <div className={inputClassName}>
+    <div className={inputClassName} data-testid="input-wrapper-test">
       <label className="input-label">{label}</label>
-      <input className="form-input" type={type} {...props} />
+      <input
+        className="form-input"
+        type={type}
+        {...props}
+        data-testid="input-test"
+      />
       {error && <div className="error-message">{error}</div>}
     </div>
   );

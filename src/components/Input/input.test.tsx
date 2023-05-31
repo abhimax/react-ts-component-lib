@@ -33,21 +33,21 @@ describe("Input component", () => {
 
   it("applies className prop", () => {
     const className = "test-class";
-    render(<Input className={className} />);
-    const input = screen.getByRole("textbox");
+    const { getByTestId } = render(<Input className={className} />);
+    const input = getByTestId("input-wrapper-test");
     expect(input).toHaveClass(className);
   });
 
   it("applies type prop", () => {
-    render(<Input type="password" />);
-    const input = screen.getByRole("textbox");
+    const { getByTestId } = render(<Input type="password" />);
+    const input = getByTestId("input-test");
     expect(input).toHaveAttribute("type", "password");
   });
 
   it("applies size prop", () => {
     const size = "small";
-    render(<Input size={size} />);
-    const input = screen.getByRole("textbox");
+    const { getByTestId } = render(<Input size={size} />);
+    const input = getByTestId("input-wrapper-test");
     expect(input).toHaveClass(`input--${size}`);
   });
 });

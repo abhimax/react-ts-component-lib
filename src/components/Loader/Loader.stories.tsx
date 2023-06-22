@@ -21,3 +21,8 @@ export const Size100 = Template.bind({});
 Size100.args = {
   size: "100px",
 };
+
+export const Message = Template.bind({});
+Message.args = {
+  message: "Loading Product list...",
+};

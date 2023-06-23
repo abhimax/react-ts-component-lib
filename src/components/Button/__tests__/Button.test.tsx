@@ -1,6 +1,6 @@
 import { render, fireEvent } from "@testing-library/react";
-import Button from "./Button";
-import Icon from "../Icon/Icon";
+import Button from "../Button";
+import Icon from "../../Icon/Icon";
 
 describe("Button", () => {
   it("renders a button element", () => {
